@@ -1,15 +1,16 @@
 %define upstream_name	 Linux-CDROM
 %define upstream_version 0.02
 
-Name: 		perl-%{upstream_name}
-Version: 	%{upstream_version}
-Release:	%mkrel 1
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	An interface to Linux CDROM device
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source:     http://www.cpan.org/modules/by-module/Linux/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:    http://www.cpan.org/modules/by-module/Linux/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires:	perl-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
@@ -40,4 +41,3 @@ rm -rf %{buildroot}
 %{perl_vendorlib}/*/Linux/CDROM*
 %{perl_vendorlib}/*/*/Linux/CDROM/*
 %{_mandir}/*/*
-
