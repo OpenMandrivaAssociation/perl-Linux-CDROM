@@ -41,3 +41,24 @@ rm -rf %{buildroot}
 %{perl_vendorlib}/*/Linux/CDROM*
 %{perl_vendorlib}/*/*/Linux/CDROM/*
 %{_mandir}/*/*
+
+
+%changelog
+* Wed Jan 25 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 0.20.0-3
++ Revision: 768358
+- svn commit -m mass rebuild of perl extension against perl 5.14.2
+
+* Tue Jul 20 2010 Jérôme Quelin <jquelin@mandriva.org> 0.20.0-2mdv2011.0
++ Revision: 555996
+- rebuild for perl 5.12
+
+* Tue Dec 08 2009 Jérôme Quelin <jquelin@mandriva.org> 0.20.0-1mdv2010.1
++ Revision: 474665
+- using %%perl_convert_version
+- update to 0.02
+
+* Mon Dec 07 2009 Bruno Cornec <bcornec@mandriva.org> 0.02-1mdv2010.1
++ Revision: 474571
+- Add Linux:CDROM perl module
+- create perl-Linux-CDROM
+
